@@ -20,16 +20,19 @@ class List extends React.Component {
     return (
         <section className={styles.component}>
           <h2 className={styles.subtitle}>
-            <Hero titleText={this.props.title} imgSpace={this.props.image} />
-            <div className={styles.description}>
-                {this.props.children}
-            </div>
+            <Hero
+              titleText={this.props.title}
+              imgSpace={this.props.image}
+              />
+              <div className={styles.description}>
+                  {this.props.children}
+              </div>
+              <div className={styles.columns}>
+                <Column title='meditation' />
+                <Column title='reading' />
+                <Column title='walking' />
+              </div>
           </h2>
-          <div className={styles.columns}>
-            <Column title='Animals' />
-            <Column title='Plants' />
-            <Column title='Minerals' />
-          </div>
         </section>
     )
   }

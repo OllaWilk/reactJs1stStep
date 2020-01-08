@@ -30,6 +30,7 @@ class List extends React.Component {
             <Column title='Plants' />
             <Column title='Minerals' />
           </div>
+
         </section>
     )
   }
