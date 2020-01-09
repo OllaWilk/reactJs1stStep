@@ -59,6 +59,7 @@ class List extends React.Component {
             <Column key={key} {...columnProps} />
           ))}
         </div>
+
       </section>
     )
   }

@@ -24,42 +24,28 @@ class List extends React.Component {
     description: settings.defaultListDescription,
   }
 
-  addColumn(title){
-    this.setState(state => (
-      {
-        columns: [
-          ...state.columns,
-          {
-            key: state.columns.length ? state.columns[state.columns.length-1].key+1 : 0,
-            title,
-            icon: 'list-alt',
-            cards: []
-          }
-        ]
-      }
-    ));
-  }
-
   render() {
     return (
-      <section className={styles.component}>
-        <h2 className={styles.subtitle}>
-          <Hero titleText={this.props.title} imgSpace={this.props.image} />
-          <div className={styles.description}>
-          {ReactHtmlParser(this.props.description)}
-          </div>
-        </h2>
+        <section className={styles.component}>
+          <h2 className={styles.subtitle}>
+            <Hero titleText={this.props.title} imgSpace={this.props.image} />
+            <div className={styles.description}>
+            {ReactHtmlParser(this.props.description)}
+            </div>
+          </h2>
+          <div className={styles.columns}>
 
-        <div className={styles.creator}>
-          <Creator text={settings.columnCreatorText} action={title => this.addColumn(title)}/>
-        </div>
-
-        <div className={styles.columns}>
           {this.state.columns.map(({key, ...columnProps}) => (
             <Column key={key} {...columnProps} />
           ))}
-        </div>
-      </section>
+
+
+
+            <Column title='Animals' />
+            <Column title='Plants' />
+            <Column title='Minerals' />
+          </div>
+        </section>
     )
   }
 }

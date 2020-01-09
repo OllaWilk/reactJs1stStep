@@ -8,11 +8,13 @@ import {pageContents, listData} from '../../data/dataStore';
 class App extends React.Component { // imprt biblioteki react
   render() { //app musi zawierać metodę render która zostaje wykonana w momencie wstawienia jej na stronie.
     return ( // metoda render zwraca obiekt JSX czyli <div>
-      <main className={styles.component}>
-      <h1 className={styles.title}>{pageContents.title}</h1>
-      <h2 className={styles.subtitle}>{pageContents.subtitle}</h2>
-      <List {...listData} />
-    </main>
+        <main className={styles.component}>
+          <h1 className={styles.title}>{pageContents.title}</h1>
+          <h2 className={styles.subtitle}>{pageContents.subtitle}</h2>
+          <List title={['Things to do ', <sup key='1'>soon!</sup>]}
+          image={'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png'} >
+          </List>
+        </main>
     )
   }
 }
