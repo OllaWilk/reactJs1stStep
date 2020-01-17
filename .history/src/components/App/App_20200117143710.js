@@ -5,9 +5,11 @@ import {pageContents, listData} from '../../data/dataStore';
 
 class App extends React.Component {
   render() { //app musi zawierać metodę render która zostaje wykonana w momencie wstawienia jej na stronie.
+    const {title, subtitle} = this.props;
     return ( // metoda render zwraca obiekt JSX czyli <div>
       <main className={styles.component}>
-        <h1 className={styles.title}>{pageContents.title}</h1>
+        <h1 className={styles.title}>{title}</h1>
+        <h2 className={styles.subtitle}>{subtitle}</h2>
         {<List {...listData} />}
       </main>
     );
