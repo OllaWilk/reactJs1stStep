@@ -4,7 +4,6 @@
      "browser": true,
      "node": true
   },
-  "parser": "babel-eslint",
   "parserOptions": {
     "ecmaVersion": 6,
     "sourceType": "module",
@@ -12,18 +11,7 @@
         "jsx": true
     }
   },
-  "settings": {
-    "react": {
-      "version": "detect"
-    }
-  },
-  "plugins": [
-    "react"
-  ],
-  "extends": [
-    "eslint:recommended",
-    "plugin:react/recommended"
-  ],
+  "extends": "eslint:recommended",
   "rules": {
     "indent": [
       "error",
