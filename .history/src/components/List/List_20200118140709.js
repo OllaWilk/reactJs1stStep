@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './List.scss';
 import Hero from '../Hero/Hero.js';
-import Column from '../Column/ColumnContainer';
+import Column from '../Column/Column.js';
 //import Creator from '../Creator/Creator.js';
 import PropTypes from 'prop-types';
 import {settings} from '../../data/dataStore';
@@ -19,7 +19,6 @@ class List extends React.Component {
 
   static defaultProps = {
     description: settings.defaultListDescription,
-    image: settings.defaultHeroImage,
   }
 
   render() {
