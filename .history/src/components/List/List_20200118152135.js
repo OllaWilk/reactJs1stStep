@@ -25,6 +25,7 @@ class List extends React.Component {
 
   render() {
     const {title, image, description, columns, addColumn} = this.props;
+
     return (
       <section className={styles.component}>
         <h2 className={styles.subtitle}>
@@ -35,7 +36,7 @@ class List extends React.Component {
         </h2>
 
         <div className={styles.creator}>
-          <Creator text={settings.columnCreatorText} action={addColumn}/>
+          <Creator text={settings.columnCreatorText} action={title => this.addColumn(title)}/>
         </div>
 
         <div className={styles.columns}>
