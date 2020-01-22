@@ -1,6 +1,6 @@
 import React from 'react';
 import Container from '../Container/Container';
-import {info, pageContents} from '../../data/dataStore';
+import {info, settings} from '../../data/dataStore';
 import Hero from '../Hero/Hero';
 
 const Info = () => (
